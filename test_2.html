@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<!-- 价格 -->
+	<form action="" name="search">
+
+
+		<ul class="first-list" style="transition-property: transform; transform-origin: 0px 0px 0px; transform: translate(0px, 0px) translateZ(0px);">
+			<li>价格选择：</li>
+
+			<p>最低价</p>
+			<label><input type="radio" name="fp" value="1">&nbsp;&nbsp;0&nbsp;&nbsp;</label> <br>
+			<label><input type="radio" name="fp" value="80000">八万</label><br>
+			<label> <input type="radio" name="fp" value="120000">十二万</label><br>
+			<label> <input type="radio" name="fp" value="200000">二十万</label><br>
+			<label> <input type="radio" name="fp" value="300000">三十万</label><br>
+			<label>  <input type="radio" name="fp" value="500000">五十万</label><br>
+			<p>最高价</p>
+			<label> <input type="radio" name="tp" value="80000">八万</label><br>
+			<label><input type="radio" name="tp" value="120000">十二万</label><br>
+			<label> <input type="radio" name="tp" value="200000">二十万</label><br>
+			<label>  <input type="radio" name="tp" value="300000">三十万</label><br>
+			<label> <input type="radio" name="tp" value="500000">五十万</label><br>
+			<label>  <input type="radio" name="tp" value="10000000">一百万</label><br>
+			<!--  <label>  <input type="radio" name="tp" value="100000000">一百万</label><br> -->
+			<input type="submit" style="display: block;margin-top: 5px;background: #3498db;font-size: 14px;text-align: center;line-height: 24px;color: #fff; width:100%; " value=" 搜索 " class="button">
+			<em id="p_alert" class="alert"></em>
+
+		</ul>
+	</form>
+	<form action="" name="search">
+		<!-- 级别 -->
+		<div class="ap" style="transition-property: transform; transform-origin: 0px 0px 0px; transform: translate(0px, 0px) translateZ(0px);">
+			<ul class="first-list rp">
+
+				<li class="level63">轿车</li>
+			</ul>
+			<ul class="second-list ">
+
+				<li><input onclick="javascript:showDiv(this)" class="inputys" type="submit" name="jb" value="微型车"></li>
+
+
+				<li><input class="inputys" type="submit" name="jb" value="小型车"></li>
+				<li><input class="inputys" type="submit" name="jb" value="紧凑型"></li>
+				<li><input class="inputys" type="submit" name="jb" value="中型车"></li>
+				<li><input class="inputys" type="submit" name="jb" value="中大型"></li>
+				<li><input class="inputys" type="submit" name="jb" value="豪华车"></li>
+			</ul>
+			<ul class="first-list rp">
+				<li class="level8"><a href="">SUV</a></li>
+			</ul>
+			<ul class="second-list ">
+
+				<li><input class="inputys" type="submit" name="jb" value="小型USV"></li>
+				<li><input class="inputys" type="submit" name="jb" value="紧凑型SUV"></li>
+				<li><input class="inputys" type="submit" name="jb" value="中型SUV"></li>
+				<li><input class="inputys" type="submit" name="jb" value="中大型SUV"></li>
+				<li><input class="inputys" type="submit" name="jb" value="大型SUV"></li>
+			</ul>
+			<ul class="first-list rp">
+				<li><input class="inputys" type="submit" name="jb" value="MPV"></li>
+			</ul>
+			<ul class="first-list rp">
+				<li><input class="inputys" type="submit" name="jb" value="跑车"></li>
+			</ul>
+			<ul class="first-list rp">
+				<li><input class="inputys" type="submit" name="jb" value="面包车"></li>
+			</ul>
+			<ul class="first-list rp">
+				<li><input class="inputys" type="submit" name="jb" value="皮卡"></li>
+			</ul>
+
+		</div>
+	</form>
+
+	<form action="" name="search">
+		<!-- 品牌 -->
+		<div id="m-filter-body-leftPopup" class="leftPopup bodyform" data-back="leftmask3" style="z-index: 999999;">
+			<div class="swipeLeft swipeLeft-block" id="m-filter-body" style="overflow: hidden;">
+				<ul class="first-list rp" style="transition-property: transform; transform-origin: 0px 0px 0px; transform: translate(0px, 0px) translateZ(0px);">
+					<li class="level63">汽车品牌</li>
+					<ul class="second-list">
+
+						<li><input class="inputys" type="submit" name="pp" value="奥迪"></li>
+
+
+						<!-- <input type="text" name="gn" size="15" value="" /> -->
+						<!--      <input type="text" name="gn" size="15" value="" />
+	                        <input type="submit" value=" 搜索 " />
+
+	                    </form> -->
+						<li><input class="inputys" type="submit" name="pp" value="宝马"></li>
+
+
+						<!-- <input type="text" name="gn" size="15" value="" /> -->
+						<!--      <input type="text" name="gn" size="15" value="" />
+	                        <input type="submit" value=" 搜索 " />
+
+	                    </form> -->
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</form>
+
+	<form action="" name="search">
+		<!-- 城市 -->
+		<div class="ap" style="transition-property: transform; transform-origin: 0px 0px 0px; transform: translate(0px, 0px) translateZ(0px);">
+
+			<div>
+				<h5>选择城市:</h5>
+
+				<div data-toggle="distpicker">
+					<div class="form-group">
+						<!-- <label class="sr-only" for="province7">Province</label> -->
+						<select class="form-control" name="sheng">
+							<option value="" data-code="">—— 省 ——</option>
+							<option value="" data-code="4096" selected="">省份</option>
+							<option value="北京市" data-code="110000">北京市</option>
+							<option value="天津市" data-code="120000">天津市</option>
+							<option value="河北省" data-code="130000">河北省</option>
+							<option value="山西省" data-code="140000">山西省</option>
+							<option value="内蒙古自治区" data-code="150000">内蒙古自治区</option>
+							<option value="辽宁省" data-code="210000">辽宁省</option>
+							<option value="吉林省" data-code="220000">吉林省</option>
+							<option value="黑龙江省" data-code="230000">黑龙江省</option>
+							<option value="上海市" data-code="310000">上海市</option>
+							<option value="江苏省" data-code="320000">江苏省</option>
+							<option value="浙江省" data-code="330000">浙江省</option>
+							<option value="安徽省" data-code="340000">安徽省</option>
+							<option value="福建省" data-code="350000">福建省</option>
+							<option value="江西省" data-code="360000">江西省</option>
+							<option value="山东省" data-code="370000">山东省</option>
+							<option value="河南省" data-code="410000">河南省</option>
+							<option value="湖北省" data-code="420000">湖北省</option>
+							<option value="湖南省" data-code="430000">湖南省</option>
+							<option value="广东省" data-code="440000">广东省</option>
+							<option value="广西壮族自治区" data-code="450000">广西壮族自治区</option>
+							<option value="海南省" data-code="460000">海南省</option>
+							<option value="重庆市" data-code="500000">重庆市</option>
+							<option value="四川省" data-code="510000">四川省</option>
+							<option value="贵州省" data-code="520000">贵州省</option>
+							<option value="云南省" data-code="530000">云南省</option>
+							<option value="西藏自治区" data-code="540000">西藏自治区</option>
+							<option value="陕西省" data-code="610000">陕西省</option>
+							<option value="甘肃省" data-code="620000">甘肃省</option>
+							<option value="青海省" data-code="630000">青海省</option>
+							<option value="宁夏回族自治区" data-code="640000">宁夏回族自治区</option>
+							<option value="新疆维吾尔自治区" data-code="650000">新疆维吾尔自治区</option>
+							<option value="台湾省" data-code="710000">台湾省</option>
+							<option value="香港特别行政区" data-code="810000">香港特别行政区</option>
+							<option value="澳门特别行政区" data-code="820000">澳门特别行政区</option>
+						</select>
+					</div>
+					<div class="form-group">
+
+						<select class="form-control" name="cs"><option value="" data-code="">—— 市 ——</option></select>
+
+					</div>
+				</div>
+
+				<input style="display: block;margin-top: 5px;background: #3498db;font-size: 14px;text-align: center;line-height: 24px;color: #fff; width:100%; " type="submit" value=" 完成 ">
+				<!-- <a href="" style="display: block;margin-top: 5px;background: #3498db;font-size: 14px;text-align: center;line-height: 24px;color: #fff;">完成</a> -->
+			</div>
+
+		</div>
+	</form>
+
+</body>
+
+</html>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("form").submit(function() {
+			var query=$(this).serializeArray();
+			console.log(query);
+			DealQuery(query);
+			return false;
+		});
+
+		$('.inputys').click(function() {
+			var query = {};
+			var name = $(this).attr('name');
+			var value = $(this).attr('value');
+
+
+			console.log(query);
+			DealQuery(query);
+			return false;
+		});
+
+		// 获得当前页面参数
+		function UrlSearch() {
+			var name, value;
+			var str = location.href; //取得整个地址栏
+			var num = str.indexOf("?")
+			str = str.substr(num + 1); //取得所有参数   stringvar.substr(start [, length ]
+
+			var arr = str.split("&"); //各个参数放到数组里
+			for (var i = 0; i < arr.length; i++) {
+				num = arr[i].indexOf("=");
+				if (num > 0) {
+					name = arr[i].substring(0, num);
+					value = arr[i].substr(num + 1);
+					this[name] = value;
+				}
+			}
+
+		}
+
+
+		// 处理替换参数
+		function DealQuery(query){
+			var Request=new UrlSearch(); //实例化
+			// Request是url当前的条件变成数组的展示
+			// query是现在用户要加入的条件，吧两个数组合并，再做成url参数传到跳转页面就能实现你要的功能
+			var query_array = Array();
+			for(x in Request){
+				query_array[x] = Request[x];
+			}
+			if (query != '') {
+				for (y in query) {
+					query_array[y] = query[y];
+				}
+			}
+			console.log(query_array);return false;
+			// 把当前数组变成url参数的形式传到地址栏
+			var query_data = '?';
+			for(k in query_array){
+				query_data = query_data + k + '=' + query_array[k] + '&';
+			}
+			// 要跳转得url地址 ,写上查询地址
+			window.location.href =  ''+query_data;
+		}
+
+		UrlSearch();
+	});
+</script>
