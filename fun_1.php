@@ -127,8 +127,18 @@ if (mb_detect_encoding($str, 'UTF-8', true)) {
     // 是UTF-8格式的字符
 }
 
-
-
+// 获取上个月的最后一天
+date_default_timezone_set('PRC');// 设置时区
+//方法一
+$times = date('d') * 24 * 3600;
+echo date('Y-m-d H:i:s', time() - $times);
+echo '<br/>';
+// 方法二
+$day = date('d');
+echo date('Y-m-d H:i:s', strtotime(-$day.'day'));
+echo '<br/>';
+// 方法三
+echo date('Y-m-d H:i:s',strtotime("last day of last month"));
 
 
 
