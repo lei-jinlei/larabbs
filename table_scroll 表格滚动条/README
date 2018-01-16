@@ -1,7 +1,0 @@
-1, 引入jq 版本1.7以上
-2，
-*调用方法
-*       $('table').table_scroll({
-*           beginRow:需要固定的行数，
-*           rowInScrollableArea:页面可视的行数 （这里包括固定的行数）
-*           });
