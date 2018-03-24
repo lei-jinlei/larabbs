@@ -1,15 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: leijinlei
- * Date: 2018/3/22
- * Time: 22:25
- */
+
 return [
     'title' => '站点设置',
 
     // 访问权限判断
-    'permission' => function()
+    'permission'=> function()
     {
         // 只允许站长管理站点配置
         return Auth::user()->hasRole('Founder');
@@ -59,13 +54,14 @@ return [
     'before_save' => function(&$data)
     {
         // 为网站名称加上后缀，加上判断是为了防止多次添加
-        if (strops($data['site_name'], 'Powered by LaraBBS') === false) {
+        if (strpos($data['site_name'], 'Powered by LaraBBS') === false) {
             $data['site_name'] .= ' - Powered by LaraBBS';
         }
     },
 
-    // 你可以自定义多个动作，每一个动作为设置页面底部的[其他操作]区块
+    // 你可以自定义多个动作，每一个动作为设置页面底部的『其他操作』区块
     'actions' => [
+
         // 清空缓存
         'clear_cache' => [
             'title' => '更新系统缓存',
