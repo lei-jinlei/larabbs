@@ -35,7 +35,7 @@ class VerificationCodesController extends Controller
         // 缓存验证码 10分钟过期
         \Cache::put($key, ['phone' => $phone, 'code' => $code], $expireAt);
 
-        return $this->response()->array([
+        return $this->response->array([
             'key' => $key,
             'expired_at' => $expireAt->toDateTimeString(),
         ])->setStatusCode(201);
