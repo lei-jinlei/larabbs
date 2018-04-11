@@ -34,7 +34,7 @@ class User extends Authenticatable implements JWTSubject
      */
     protected $fillable = [
         'name', 'email', 'password', 'introduction','avatar',
-        'phone', 'weixin_openid', 'weixin_unionid'
+        'phone', 'weixin_openid', 'weixin_unionid','registration_id'
     ];
 
     /**

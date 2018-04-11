@@ -17,7 +17,7 @@ $api = app('Dingo\Api\Routing\Router');
 
 $api->version('v1', [
     'namespace' => 'App\Http\Controllers\Api',
-    'middleware' => ['serializer:array', 'bindings']
+    'middleware' => ['serializer:array', 'bindings', 'change-locale']
 ], function($api) {
     $api->get('version', function() {
         return response('this is version v1');
@@ -114,6 +114,13 @@ $api->version('v1', [
             // 某个用户的回复列表
             $api->get('users/{user}/replies', 'RepliesController@userIndex')
                 ->name('api.users.replies.index');
+
+            // 资源推荐
+            $api->get('links', 'LinksController@index')
+                ->name('api.links.index');
+            // 活跃用户
+            $api->get('actived/users', 'UsersController@activedIndex')
+                ->name('api.actived.users.index');
 
             // 当前登录用户权限
             $api->get('user/permissions', 'PermissionsController@index')
